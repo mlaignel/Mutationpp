@@ -73,6 +73,20 @@ void NAME_MANGLE(initialize)(
     F_STRLEN state_length);
 
 /**
+ * Initialize the mutation++ library using a given species descriptor and desired options.  This should be
+ * called once before calling any other function.
+ */
+void NAME_MANGLE(initialize_from_species)(
+    F_STRING species, F_STRING state_model, F_STRING thermo_DB,
+    F_STRLEN species_length, F_STRLEN state_model_length, F_STRLEN thermo_DB_length);
+
+/**
+ * Sets the algorithm used to estimate the diffusion coefficient.
+ */
+void NAME_MANGLE(set_diffusion_algo)(
+    F_STRING diffusion_algo, F_STRLEN diffusion_algo_length);
+
+/**
  * Deallocates all data associated with the mutation++ library.  Should be
  * called once after all other functions have been called.
  */

@@ -82,6 +82,34 @@ void NAME_MANGLE(initialize)(
 }
 
 //==============================================================================
+void NAME_MANGLE(initialize_from_species)(
+    F_STRING species, F_STRING state_model, F_STRING thermo_DB,
+    F_STRLEN species_length, F_STRLEN state_model_length, F_STRLEN thermo_DB_length)
+{
+//#ifdef _GNU_SOURCE
+//    // Enable floating point exception handling
+//    feenableexcept(FE_DIVBYZERO | FE_INVALID | FE_OVERFLOW);
+//#endif
+
+    Mutation::MixtureOptions opts;
+
+    opts.setSpeciesDescriptor(char_to_string(species, species_length));
+    opts.setStateModel(char_to_string(state_model, state_model_length));
+    opts.setThermodynamicDatabase(char_to_string(thermo_DB, thermo_DB_length));
+    
+    p_mix = new Mutation::Mixture(opts);
+    p_work_species = new double [p_mix->nSpecies()];
+    p_work_element = new double [p_mix->nElements()];
+}
+
+//==============================================================================
+void NAME_MANGLE(set_diffusion_algo)(
+    F_STRING diffusion_algo, F_STRLEN diffusion_algo_length)
+{
+    p_mix->setDiffusionMatrixAlgo(char_to_string(diffusion_algo,diffusion_algo_length));
+}
+
+//==============================================================================
 void NAME_MANGLE(destroy)()
 {
     delete p_mix;
