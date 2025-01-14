@@ -1,0 +1,12 @@
+<!-- 9 species air - H2 mixture -->
+<mixture mechanism="none" state_model="ChemNonEq1T" thermo_db="NASA-9" thermal_conductivity="LDLT" viscosity="LDLT">
+
+    <species>
+        H2 H O2 OH O H2O HO2 H2O2 N2
+    </species>
+
+    <!-- <element_compositions default="air">
+        <composition name="air"> N2:0.79, O2: 0.21 </composition>
+    </element_compositions> -->
+
+</mixture>
