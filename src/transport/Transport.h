@@ -76,8 +76,14 @@ public:
     /// Returns the number of collision pairs accounted for in this mixture.
     int nCollisionPairs() const { return m_collisions.size(); }
     
-    //void omega11ii(double* const p_omega);
-    //void omega22ii(double* const p_omega);
+    /// Provides Q11 collision integrals for diagonal heavy-heavy interactions.
+    const Eigen::ArrayXd& Q11ij() { return m_collisions.Q11ij(); }
+
+    /// Provides Q11 collision integrals for heavy-heavy interactions.
+    const Eigen::ArrayXd& Q11ii() { return m_collisions.Q11ii(); }
+    
+    /// Returns binary diffusion coefficients for heavy-heavy interactions.
+    const Eigen::ArrayXd& nDij() { return m_collisions.nDij(); }
     
     /// Returns the mixture viscosity.
     double viscosity();

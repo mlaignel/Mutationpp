@@ -670,6 +670,15 @@ void py_export_Mixture(py::module &m) {
            "Returns the number of collision pairs accounted for in this "
            "mixture.")
 
+      .def("Q11ij", &Mutation::Mixture::Q11ij,
+           "Provides Q11 collision integrals for diagonal heavy-heavy interactions.")
+
+      .def("Q11ii", &Mutation::Mixture::Q11ii,
+           "Return Q11 collision integrals for heavy-heavy interactions.")
+
+      .def("nDij", &Mutation::Mixture::nDij,
+           "Returns binary diffusion coefficients for heavy-heavy interactions.")
+
       .def("viscosity", &Mutation::Mixture::viscosity,
            "Returns the mixture viscosity.")
 
