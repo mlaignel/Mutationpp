@@ -1867,6 +1867,13 @@
             O: 2
         </stoichiometry>
     </species>
+
+    <species name="HO2">
+        <stoichiometry>
+            H: 1,
+            O: 2
+        </stoichiometry>
+    </species>
  
 	<!-- Prop-2-Vinylidene Singlet -->
 	<species name="HCCCH">

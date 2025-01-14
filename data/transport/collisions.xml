@@ -171,6 +171,8 @@
         <species name="O2"     value="1.58"   ref="Wright2007"/>
         <species name="O3"     value="3.21"   ref="Andre2010"/>
         <species name="OH"     value="1.47"   ref="Andre2010"/>
+        <species name="HO2"    value="1.95"   ref="R. Handbook of Chemistry and Physics"/>
+        <species name="H2O2"   value="2.23"   ref="R. Handbook of Chemistry and Physics"/>
     </dipole-polarizabilities>
 
     <!-- Effective electrons participating in polarization -->
@@ -223,6 +225,8 @@
         <species name="O" value="4.7" />
         <species name="O2" value="9.33" />
         <species name="OH" value="5.57" />
+        <species name="H2O2" value="11.57" />
+        <species name="HO2" value="10.23" />
     </effective-electrons>
 
     <!-- Explicitly defined collision pairs -->
