@@ -1,0 +1,8 @@
+<!-- Neutral O2 species air mixture -->
+<mixture mechanism="O2" state_model="ChemNonEq1T" thermo_db="NASA-9">
+
+    <species>
+        O O2
+    </species>
+
+</mixture>
